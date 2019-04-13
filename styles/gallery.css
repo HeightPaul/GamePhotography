@@ -1,0 +1,90 @@
+#main-nav #responsive-nav a:nth-child(3){
+	margin-bottom: 0;
+	border-bottom: 5px solid rgb(207, 255, 162);
+	background: linear-gradient(to bottom,rgba(207, 255, 162,0),rgba(207, 255, 162,1) 30%);
+}
+#main-nav #responsive-nav a:nth-child(3):hover, #main-nav #hidden-nav a:hover{
+	border-bottom: 5px solid #e9ff81;
+	background: rgb(50, 104, 15);
+}
+#first-article h2{
+	text-align: center;
+}
+.img-gallery{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.column{
+	flex: 1;
+    margin: 0 7px;
+}
+.img-elem{
+	margin-bottom: 14px;
+    vertical-align: middle;
+}
+.img-elem:hover{
+	box-shadow: 0 0 20px brown;
+	transform: scale(1.5);
+	border-radius: 0px;
+}
+.img-elem img{
+	border-radius: 0px 10px;
+	margin-bottom: -5px; /* removed weird distance between desc and img*/
+}
+.img-elem img:hover{
+	border-radius: 0;
+}
+.desc{
+	font-weight: bold;
+	text-align: center;
+	padding: 10px;
+	color: #52090B;
+	background: rgb(255, 174, 68);
+	display: none;
+}
+.img-elem img:hover~.desc{
+	display: block;
+}
+#credits{
+	text-align: center;
+}
+@media (max-width: 960px){
+	#main-nav #responsive-nav a:nth-child(1){
+		order: 1;
+	}
+	#main-nav #responsive-nav a:nth-child(2){
+		order: 2;
+	}
+	#main-nav #responsive-nav a:nth-child(3){
+		order: 3;
+	}
+	#main-nav #responsive-nav a:nth-child(4){
+		order: 4;
+	}
+}
+@media (max-width: 720px){
+	#main-nav #responsive-nav a:nth-child(3){
+		border-bottom: 2px solid rgb(207, 255, 162);
+		background: linear-gradient(to right,rgba(207, 255, 162,1),rgba(207, 255, 162,0) 50%,rgba(207, 255, 162,1));
+	}
+	#main-nav #responsive-nav a:nth-child(3):hover{
+		border-bottom: 2px solid rgb(207, 255, 162);
+		background: rgb(50, 104, 15);
+	}
+	#main-nav #hidden-nav a:hover{
+		border-bottom: 5px solid #e9ff81;
+	}
+	#main-nav #responsive-nav a:nth-child(1){
+		order: 1;
+	}
+	#main-nav #responsive-nav a:nth-child(2){
+		order: 2;
+	}
+	#main-nav #responsive-nav a:nth-child(3){
+		order: 3;
+	}
+	#main-nav #responsive-nav a:nth-child(4){
+		order: 4;
+	}
+}

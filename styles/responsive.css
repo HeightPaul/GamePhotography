@@ -1,0 +1,156 @@
+@media (max-width: 960px){
+	#wrapper{
+		width: 100%;
+	}
+	#header-text{
+		font-size: 85%;
+	}
+	#main-nav ul{
+		flex-wrap: wrap;
+	}
+	#main-nav ul a{
+		flex-basis: 30%;
+	}
+	/*index.html*/
+	.flex-text{
+		flex-wrap: wrap;
+	}
+	.flex-text article{
+		flex-basis: 100%;
+	}
+	.flex-text #f-t-2{
+		display: none;
+	}
+	#swapping-img:hover~#f-t-1{
+		display: none;
+	}
+	#swapping-img:hover~#f-t-2{
+		display: block;
+		margin-bottom: 0;
+	}
+	.flex-text article:nth-child(1){
+		margin-bottom: 10%;
+		flex: 1;
+	}
+	.flex-text article:nth-child(2){
+		margin-left: 0;
+	}
+	/*software.html*/
+	article div,article h2{
+		margin-bottom: 5%;
+	}
+	.text-bigpic{
+		display: block;
+	}
+	.text-bigpic .text-bp-r{
+		margin: 3% 0 0 0;
+	}
+	#ansel-img{
+		margin-right: 0;
+	}
+	#ansel-p{
+		display: block;
+	}
+	#ansel-p #ansel-text-1{
+		margin-left: -1.5%; /*class="m-l" reduction*/
+	}
+	/*gallery.html*/
+	.column{
+        flex: 47.5%;
+    }
+	.img-elem:hover{
+		transform: scale(1.15);
+	}
+	/*share.html*/
+	#sign-form .inline-l-f-n input{
+		width: 94%;
+	}
+	#sign-in-form{
+		position: initial;
+	}
+	#forgot{
+		position: initial;
+	}
+	.btn,#lastname{
+		float: none;
+	}
+	.btn{
+		width: 100%;
+		margin: 3% 0 0 0;
+	}
+}
+@media (max-width: 720px){
+	section, aside{
+		flex-basis: 100%;
+	}
+	#header-text{
+		display: none;
+	}
+	#main-nav #hidden-nav{
+		display: flex;
+	}
+	#main-nav #responsive-nav{
+		height: 0;
+    	overflow: hidden;
+		visibility: hidden;
+  		opacity: 0;
+	}
+	#main-nav:hover #responsive-nav{
+		height: auto;
+		visibility: visible;
+  		opacity: 1;
+  		transition: 1s;
+	}
+	#main-nav:hover #hidden-nav{
+		background: rgb(207, 255, 162);
+	}
+	#main-nav ul a{
+		flex-basis: 100%;
+		font-size: 80%;
+		margin: 0; 
+		border-bottom: 2px solid rgb(207, 255, 162);
+		background: linear-gradient(to right,rgba(207, 255, 162,1),rgba(207, 255, 162,0) 50%,rgba(207, 255, 162,1));
+		padding: 3%;
+	}
+	#first-article{
+		font-size: 120%;
+	}
+	.last-p{
+		font-size: 180%;
+	}
+	/*gallery.html*/
+	.column{
+		flex: 100%;
+        max-width: 100%;
+        margin: 0; /*margin: 0 7px; reduction*/
+	}
+	.img-elem:hover{
+		transform: scale(1.03);
+	}
+	/*share.html*/
+	.radiochoice span{
+		margin-top: 10%;
+		display: block;
+	}
+	#sign-div{
+		display: block;
+	}
+	#sign-up-form{
+		margin-right: 0;
+		margin-bottom: 3%;
+	}
+	#upload-form .btn-res{
+		margin-left: 0;
+	}
+@media (max-width: 480px){
+	#first-article h2{
+		font-size: 110%;
+	}
+	#main-footer{
+		text-align: center;
+	}
+	.footer-t-l,.footer-t-r{
+		float: none;
+		display: block;
+	}
+}

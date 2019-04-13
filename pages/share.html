@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Game Photography: Share</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Hristo Paul 1701681082">
+	<meta name="description" content="Course Project: Share Page">
+
+	<link rel="stylesheet" type="text/css" href="../styles/main.css">
+	<link rel="stylesheet" type="text/css" href="../styles/share.css">
+	<link rel="stylesheet" type="text/css" href="../styles/responsive.css">
+</head>
+<body>
+<div id="wrapper">
+	<header id="main-header">
+		<div id="header-text" class="upcase">
+			<h1>Game Photography</h1>
+		</div>
+		<nav id="main-nav" class="upcase">
+			<ul id="hidden-nav">
+				<a>menu</a>
+			</ul>
+			<ul id="responsive-nav">
+				<a href="share.html"><li>share</li></a>
+				<a href="gallery.html"><li>gallery</li></a>
+				<a href="software.html"><li>software</li></a>
+				<a href="index.html"><li>home</li></a>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<article id="first-article">
+				<h2 class="upcase">it is show time!</h2>
+				<p class="form-p">The section for publishing your impressive screenshot artpieces</p>
+				<p><em>Note:All your materials are well-hidden from dangerous behavior.</em></p>
+			</article>
+			<hr>
+			<div id="sign-div">
+				<form id="sign-up-form" method="POST" action="./upload.php">
+					<div class="main-label">save you new? register</div>
+					<div class="inline-l-f-n">
+						<label for="firstname">Name*:</label><br>
+						<input type="text" name="firstname" placeholder="First" id="firstname" class="field">
+						<input type="text" name="lastname" placeholder="Last" id="lastname" class="field">
+					</div>
+					<div class="inline-l-f">
+						<label for="usernameup">Username*:</label>
+						<input requtype="text" name="usernameup" placeholder="2-20 characters" id="usernameup" class="field">
+					</div>
+					<div class="inline-l-f">
+						<label for="email">Your e-mail*:</label>
+						<input type="email" name="email" placeholder="ex@mple.com" id="email" class="field" 
+						onclick="alignTextLeft()" onfocus="alignTextLeft()">
+					</div>
+					<div class="radiochoice">
+						<label>Sex:</label>
+						<span><input type="radio" name="sex" value="male"> Male</span>
+						<span><input type="radio" name="sex" value="female"> Female</span>
+					</div>
+					<div class="inline-l-f">
+						<label for="tel">Phone №:</label>
+						<input type="tel" name="tel" placeholder="+999 999 999 999" id="tel" class="field" 
+							pattern="[\+\d+\s*]{11,}">
+					</div>
+					<div class="inline-l-f">
+						<label for="passwordsup">Password*:</label>
+						<input type="password" name="passwordsup" placeholder="At least 6 characters" id="passwordup" class="field">
+					</div>
+					<div class="inline-l-f">
+						<label for="conpassword">Confirm Password*:</label>
+						<input type="password" name="passwordcon" placeholder="Repeat it" id="passwordcon" class="field">
+					</div>
+					<input type="reset" class="btn btn-res" value="Reset">
+					<input type="submit" class="btn btn-reg" value="Register">
+				</form>
+				<form id="sign-in-form" method="POST" action="./upload.php">
+					<div class="main-label">already a user? sign in</div>
+					<div class="inline-l-f">
+						<label for="usernamein">Username:</label>
+						<input type="text" name="usernamein" id="usernamein" class="field">
+					</div>
+					<div class="inline-l-f">
+						<label for="password">Password:</label>
+						<input type="password" name="password" id="passwordin" class="field">
+					</div>
+					<div class="inlinechbox">
+						<input type="checkbox" name="rem" id="rembox"/>
+						<label id="rem" for="rembox">Remember me?</label>
+					</div><br>
+					<input type="submit" class="btn btn-signin" value="Sign In">
+					<div>
+						<a id="forgot" href="#">Forgot Password</a>
+					</div>
+				</form>
+			</div>
+			<div id="upload-div">
+				<form id="upload-form" method="POST" action="upload.php">
+					<div class="m-t">
+						<label for="img-upload">Image*:</label>
+						<label for="img-upload" class="img-upload-t">Upload</label><br>
+						<input required id="img-upload" type="file" class="field"><br>
+					</div>
+					<div class="inline-l-f">
+						<label for="pcname">Image Name*:</label>
+						<input type="text" name="picname" placeholder="2-20 characters" id="picname" class="field">
+					</div>
+					<div class="inline-l-f">
+						<label for="capdate">Date of Capturing:</label>
+						<input type="date" name="capdate" id="capdate" class="field" min="1980-01-01" max="2018-06-07">
+					</div>
+					<div class="radiochoice">
+						<label>Genre*:</label>
+						<span><input type="radio" name="genre" value="fps"> Sports</span>
+						<span><input type="radio" name="genre" value="rpg"> RPG</span>
+						<span><input type="radio" name="genre" value="rpg"> Shooter</span>
+						<span><input type="radio" name="genre" value="sim"> Sim</span>
+						<span><input type="radio" name="genre" value="othergenre" required> Other</span>
+					</div>
+					<div class="inline-l-f">
+						<label for="pic-details">Description:</label><br>
+						<textarea name="capdate" placeholder="Details about the picture." id="pic-details"></textarea>
+					</div>
+					<div>
+						<button class="btn" onclick="hidePicUpload()">Go Back</button>
+						<input type="reset" class="btn btn-res" value="Reset">
+						<input type="submit" class="btn btn-upload" value="Upload The Image">
+					</div>
+					<div>
+						<span id="hidden-text">The image has been uploaded successfully!</span>
+					</div>
+				</form>
+				
+			</div>
+			<div class="last-p">
+				<p><a href="index.html">Come back at any time!</a></p>
+			</div>
+		</section>
+		<aside>
+			<h2>Quick peak at <a href="gallery.html">Gallery</a></h2>
+			<h3>BioShock</h3>
+			<img src="../images/gallery/bioshock.jpg" alt="Bioshock Picture">
+			<h3>Star Wars: Battlefront - Boba's Planet</h3>
+			<img src="../images/gallery/boba_s_planet.jpg" alt="Boba's Planet from SW:BF">
+		</aside>
+	</main>
+	<footer id="main-footer">
+		<span class="footer-t-l"><a href="index.html">Game Photography</a></span>
+		<span class="footer-t-r">You copycat, I copyright strike. <a href="#">&#169; Hristo Paul</a></span>
+	</footer>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script> -->
+<script src="../scripts/forms.js"></script>
+</body>
+</html>
